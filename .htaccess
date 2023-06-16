@@ -1,0 +1,5 @@
+RewriteEngine On
+
+#routes every request to public/index.php file
+RewriteCond %{REQUEST_URI}  !(\.png|\.jpg|\.webp|\.gif|\.jpeg|\.zip|\.css|\.svg|\.js|\.pdf)$
+RewriteRule (.*) public/index.php [QSA,L]
